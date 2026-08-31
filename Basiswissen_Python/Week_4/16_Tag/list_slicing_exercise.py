@@ -32,7 +32,6 @@ print(numbers)
 
 # Prüfe, ob die Zahl 20 enthalten ist
 # returns boolean
-
 print(20 in numbers)
 
 # Erstelle eine Kopie der Liste
