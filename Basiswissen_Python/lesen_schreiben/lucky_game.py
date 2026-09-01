@@ -28,15 +28,15 @@ while attempt < 5:
             point = points[attempt]
             
             print(f"You got {point} points!")
-            file.write(f"\n{user_name} has won {point} points on {now}")
+            file.write(f"\nOn {now} {user_name} has won {point} points")
             break
         
         elif user_input < secret_number:
             print("The number is too low. Try again!")
-            file.write(f"\n{user_name} has guessed too low on {now}...")
+            file.write(f"\nOn {now} {user_name} has guessed too low on {now}...")
         else:
             print("The number is too high. Try again!")
-            file.write(f"\n{user_name} has guessed too high on {now}...")
+            file.write(f"\nOn {now} {user_name} has guessed too high on {now}...")
 else:
     print("You have no more attempts left. You lose!")
     
