@@ -26,6 +26,7 @@ print(numbers)
 numbers.sort()
 print(numbers)
 
+
 # Drehe die Liste um
 numbers.reverse()
 print(numbers)
