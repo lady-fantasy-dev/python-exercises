@@ -17,12 +17,12 @@ numbers_dict = {
 }
 
 def phone_number_to_words(user_input):
-    for i in user_input:
-            try:
-                word = numbers_dict[i]
-                print(word, end = " ")
+    result = []
 
-            except KeyError:
-                 raise Exception("That was not a valid number!")
+    for digit in user_input:
+            # if digit == numbers_dict[digit]:
+        result.append(numbers_dict[digit])
+    return " ".join(result)
 
-phone_number_to_words(user_input)
+# Test the function
+print(phone_number_to_words(user_input))
