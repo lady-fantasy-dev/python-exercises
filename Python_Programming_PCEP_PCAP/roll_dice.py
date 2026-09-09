@@ -14,15 +14,18 @@ import random
 def greet():
     print("Welcome to the game!")
 
-def roll_dice():
-    num1 = random.randint(1, 6)
-    num2 = random.randint(1, 6)
-    return num1, num2
+# def roll_dice():
+#     num1 = random.randint(1, 6)
+#     num2 = random.randint(1, 6)
+#     return num1, num2
 
 # Modify the program so the user can specify how many dice they want to roll.
-# def roll_dice():
-#     user_input = int(input("How many dice between 1 and 6 would you like to roll? "))
-#     return random.sample(range(1, 7), user_input)
+def roll_dice():
+    number_of_dice = int(input("How many dice between 1 and 6 would you like to roll? "))
+    if number_of_dice < 1 or number_of_dice > 6:
+        raise ValueError("Please enter a number between 1 and 6.")
+    else:
+        return [random.randint(1, 6) for _ in range(number_of_dice)]
 
 def ask_play_again():
     while True:
