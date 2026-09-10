@@ -37,9 +37,6 @@ def ask_play_again():
         else:
             print("Please enter y or n: ")
 
-def raise_exception():
-    raise ValueError("Please enter a valid response...")
-
 def play_game():
     greet()
     times_played = 0
