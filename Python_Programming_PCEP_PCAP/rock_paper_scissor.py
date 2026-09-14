@@ -20,7 +20,7 @@ def generate_computer_choice():
 
 def get_user_choice():
     while True:
-        choice = input("Please enter 'r', 'p', or 's': ")
+        choice = input("Please enter 'r', 'p', or 's': ").lower()
 
         if choice in choices:
                 return choice

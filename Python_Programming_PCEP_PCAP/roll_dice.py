@@ -14,6 +14,7 @@ import random
 def greet():
     print("Welcome to the game!")
 
+# This is the more basic version of the function below:
 # def roll_dice():
 #     num1 = random.randint(1, 6)
 #     num2 = random.randint(1, 6)
