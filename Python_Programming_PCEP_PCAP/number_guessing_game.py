@@ -19,7 +19,7 @@ def get_valid_guess():
             if 1 <= user_guess <= 100:
                 return user_guess
 
-            print(("The number should be between 1 and 100."))
+            print("The number should be between 1 and 100.")
 
         except ValueError:
             print("Please enter a valid number between 1 and 100.\nTry again...")
