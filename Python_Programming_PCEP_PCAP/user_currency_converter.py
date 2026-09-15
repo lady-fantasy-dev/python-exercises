@@ -10,6 +10,12 @@ user_input = float(input("Enter the amount to be converted: "))
 source_currency = input("Choose a source currency: 'USD', 'EUR', or 'CAD': ")
 target_currency = input("Choose a target currency: 'USD', 'EUR', or 'CAD': ")
 
-conversion = c.convert(user_input, source_currency, target_currency, date=date(2026, 9, 14))
+conversion = c.convert(
+    user_input,
+    source_currency,
+    target_currency,
+    date=date(2026, 9, 14)
+    )
 
-print(conversion)
+# Test the currency conversion
+print(round(conversion, 2))
