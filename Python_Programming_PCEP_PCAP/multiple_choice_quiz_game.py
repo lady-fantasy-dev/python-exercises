@@ -44,15 +44,11 @@ print("Answer the following question: ")
 score = 0
 
 for question in questions:
-    # question = random.choice(questions)
     print(question["question"])
 
     options = (question["options"])
     for x, y in options.items():
         print(f"{x}) {y}")
-        # print(y)
-
-    # Ask user to answer & validate
 
     while True:
         user_answer = input("Select the right answer: 'a', 'b', or 'c': ").lower()
