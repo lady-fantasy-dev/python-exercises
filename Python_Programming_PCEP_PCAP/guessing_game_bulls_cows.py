@@ -5,7 +5,7 @@
 import random
 
 def generate_secret_number():
-    return(random.sample(range(0,10), 4))
+    return random.sample(range(10), 4)
 
 def validate_input(guess):
     while True:
@@ -21,41 +21,39 @@ def count_bulls_cows(guess, secret_number):
     cow = 0
 
     for index, user_num in enumerate(guess):
-        print("index in for loop:", index)
-        print("user num in for loop:", user_num)
-
         if int(user_num) in secret_number:
             if index == secret_number.index(int(user_num)):
                 bull += 1
-                print("bull:", bull)
             else:
                 cow += 1
-                print("cow:", cow)
 
-    print("bull and cow outside loop:", bull, cow)
-    return(bull, cow)
+    return bull, cow
 
 def determine_win(bull, cow):
         if bull == 4:
             print("You win")
-        # what to return?
+            return True
         else:
             print(f"You have {bull} bull(s) and {cow} cow(s)!")
+            return False
 
 def play_game():
     print("Welcome to the game!")
+    print("I have generated a 4-digit number with unique digits. Try to guess it...")
 
     secret_number = generate_secret_number()
-    print("secret number:", secret_number)
 
-    guess = input("I have generated a 4-digit number with unique digits. Try to guess it: ")
+    while True:
 
-    guess = validate_input(guess)
+        guess = input("Enter your guess: ")
 
-    bull, cow = count_bulls_cows(guess, secret_number)
-    print("line 57:", bull, cow)
+        guess = validate_input(guess)
 
-    determine_win(bull, cow)
+        bull, cow = count_bulls_cows(guess, secret_number)
 
+        game_won = determine_win(bull, cow)
+
+        if game_won:
+            break
 
 play_game()
